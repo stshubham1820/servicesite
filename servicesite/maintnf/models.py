@@ -32,7 +32,7 @@ class about_us(models.Model):
 class service_category(models.Model):
     name=models.CharField(primary_key=True,max_length=50,unique=True,verbose_name='Category name')
     descript=models.TextField(verbose_name='Category Description')
-    image=models.ImageField(upload_to='Media',verbose_name='Category Image')
+    #image=models.ImageField(upload_to='Media',verbose_name='Category Image')
 
     def __str__(self):
         return str(self.name)
@@ -41,14 +41,14 @@ class service_sub_category(models.Model):
     cat_name=models.ForeignKey(service_category,on_delete=models.CASCADE,verbose_name='Category name')
     sub_cat_name=models.CharField(max_length=30,verbose_name='Sub Category Name')
     sub_descript=models.TextField(verbose_name='Sub Category Description')
-    sub_img=models.ImageField(upload_to='Media',verbose_name='Sub Category Image')
+    #sub_img=models.ImageField(upload_to='Media',verbose_name='Sub Category Image')
 
     def __str__(self):
         return str(self.sub_cat_name)
 
 class testimonials(models.Model):
     client_name=models.CharField(max_length=50,verbose_name='Client name')
-    client_image=models.ImageField(upload_to='Media',verbose_name='Client Image')
+    #client_image=models.ImageField(upload_to='Media',verbose_name='Client Image')
     feedback=models.TextField(verbose_name='Feedback')
     date=models.DateField(default=timezone.now,verbose_name='Date')
     rating=models.CharField(max_length=1,choices=rating,verbose_name='Rating by client')
