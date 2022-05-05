@@ -31,13 +31,13 @@ INSTALLED_APPS = [
     'maintnf', #created app 
 ]
 
-REST_FRAMEWORK = {
+'''REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
-}
+}'''
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -121,12 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR,"static"]
+# STATICFILES_DIRS = [BASE_DIR,"static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL='/Media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'Media')
+'''MEDIA_URL='/Media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'Media')'''
