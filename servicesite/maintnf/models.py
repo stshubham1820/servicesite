@@ -14,6 +14,7 @@ class contact_us(models.Model):
     name=models.CharField(verbose_name='Name',max_length=50)
     email=models.EmailField(verbose_name='Email Address',max_length=50,null=True)
     phone=models.CharField(max_length=12,verbose_name='Mobile Number')
+    address=models.TextField(verbose_name='Address',null=True)
     message=models.TextField(verbose_name='Message')
 
     def __str__(self):
