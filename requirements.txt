@@ -9,3 +9,4 @@ sqlparse==0.4.2
 tzdata==2022.1
 zipp==3.8.0
 django-cors-headers==3.11.0
+django_resized

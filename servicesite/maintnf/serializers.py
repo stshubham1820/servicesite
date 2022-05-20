@@ -31,3 +31,8 @@ class FeedbackSerializers(serializers.ModelSerializer):
     class Meta:
         model = feedback
         fields = '__all__'
+
+class TeamSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = team
+        fields = '__all__'

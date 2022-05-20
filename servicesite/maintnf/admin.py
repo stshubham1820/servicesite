@@ -14,3 +14,5 @@ admin.site.register(service_sub_category)
 admin.site.register(testimonials)
 
 admin.site.register(feedback)
+
+admin.site.register(team)

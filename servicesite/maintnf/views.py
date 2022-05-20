@@ -47,3 +47,10 @@ def getfeedback(request):
     print(obj)
     objser = FeedbackSerializers(obj,many=True)
     return Response(objser.data)
+
+@api_view(['GET'])
+def getteam(request):
+    obj = team.objects.all()
+    print(obj)
+    objser = FeedbackSerializers(obj,many=True)
+    return Response(objser.data)

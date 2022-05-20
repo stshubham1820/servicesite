@@ -7,5 +7,6 @@ urlpatterns = [
     path('getservice_sub_category/',views.getservice_sub_category),
     path('getservice_category/',views.getservice_category),
     path('gettestimonials/',views.gettestimonials),
-    path('getfeedback/',views.getfeedback)
+    path('getfeedback/',views.getfeedback),
+    path('getteam/',views.getteam),
 ]
