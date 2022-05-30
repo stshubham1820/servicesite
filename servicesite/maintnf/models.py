@@ -11,11 +11,18 @@ rating=(
     ('5','5'),
 )
 
+service_choice=(
+    (),
+    (),
+    (),
+)
+
 class contact_us(models.Model):
     name=models.CharField(verbose_name='Name',max_length=50)
     email=models.EmailField(verbose_name='Email Address',max_length=50,null=True)
     phone=models.CharField(max_length=12,verbose_name='Mobile Number')
     address=models.TextField(verbose_name='Address',null=True)
+    #service_choice=models.CharField(choices=service_choice,max_length=50,verbose_name='Service choice')
     message=models.TextField(verbose_name='Message')
 
     def __str__(self):
@@ -116,3 +123,18 @@ class team(models.Model):
 
     def __str__(self):
         return str(self.name)
+class client(models.Model):
+    name=models.CharField(max_length=50,verbose_name='Client Name')
+    image=models.ImageField(upload_to='Media',verbose_name='Client Image')
+    description=models.TextField(verbose_name='Description')
+    project=models.CharField(max_length=100,verbose_name='Project name')
+
+    def save(self):
+        super().save()  # saving image first
+
+        img = Image.open(self.image.path) # Open image using self
+
+        if img.height > 400 or img.width > 400:
+            new_img = (400, 400)
+            img.thumbnail(new_img)
+            img.save(self.image.path)  # saving image at the same path

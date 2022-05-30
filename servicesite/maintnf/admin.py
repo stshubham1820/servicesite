@@ -16,3 +16,5 @@ admin.site.register(testimonials)
 admin.site.register(feedback)
 
 admin.site.register(team)
+
+admin.site.register(client)
